@@ -6,14 +6,24 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate {
+    
+    @IBOutlet var playPauseButton: UIButton!
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var progressSlider: UISlider!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func touchUpPlayPauseButton(_ sender: UIButton) {
+        
+    }
 
-
+    @IBAction func sliderValueChanged(_ sender: Any) {
+    }
 }
 
