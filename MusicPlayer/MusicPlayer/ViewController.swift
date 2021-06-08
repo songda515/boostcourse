@@ -102,8 +102,8 @@ class ViewController: UIViewController {
         let centerY: NSLayoutConstraint // button 을 view 의 수직 중앙 위치 * 0.8 에 배치
         centerY = NSLayoutConstraint(item: button, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 0.8, constant: 0)
         
-        let width: NSLayoutConstraint // button 의 너비를 view 의 절반으로 설정
-        width = button.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.5)
+        let width: NSLayoutConstraint // button 의 너비를 200으로 설정
+        width = button.widthAnchor.constraint(equalToConstant: 200)
         
         let ratio: NSLayoutConstraint // button 의 높이를 button 의 너비와 같게 설정
         ratio = button.heightAnchor.constraint(equalTo: button.widthAnchor, multiplier: 1)
