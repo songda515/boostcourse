@@ -15,18 +15,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuM-Z2-ntj">
+                                <rect key="frame" x="107" y="258.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JuM-Z2-ntj" secondAttribute="height" multiplier="1:1" id="JEx-FV-BvX"/>
+                                    <constraint firstAttribute="width" constant="200" id="sib-oJ-581"/>
+                                </constraints>
+                                <state key="normal" image="button_play"/>
+                                <state key="selected" image="button_pause"/>
+                                <connections>
+                                    <action selector="touchUpPlayPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7CM-kc-gZD"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cFG-3V-cXw">
+                                <rect key="frame" x="14" y="495" width="386" height="31"/>
+                                <color key="minimumTrackTintColor" systemColor="systemOrangeColor"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="gb4-Yd-qmT"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cL8-lv-p2d">
+                                <rect key="frame" x="169.5" y="466.5" width="75.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cFG-3V-cXw" firstAttribute="top" secondItem="cL8-lv-p2d" secondAttribute="bottom" constant="8" id="5Lc-Ba-Wj1"/>
+                            <constraint firstItem="JuM-Z2-ntj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.8" id="6f0-Zr-uia"/>
+                            <constraint firstItem="cL8-lv-p2d" firstAttribute="top" secondItem="JuM-Z2-ntj" secondAttribute="bottom" constant="8" id="T5X-hs-blH"/>
+                            <constraint firstItem="cL8-lv-p2d" firstAttribute="centerX" secondItem="JuM-Z2-ntj" secondAttribute="centerX" id="XU4-DX-bh1"/>
+                            <constraint firstItem="JuM-Z2-ntj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d2j-Sb-BKB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cFG-3V-cXw" secondAttribute="trailing" constant="16" id="j1w-lt-hFo"/>
+                            <constraint firstItem="cFG-3V-cXw" firstAttribute="centerX" secondItem="cL8-lv-p2d" secondAttribute="centerX" id="sDH-DY-rVN"/>
+                            <constraint firstItem="cFG-3V-cXw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uIM-O7-vWn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playPauseButton" destination="JuM-Z2-ntj" id="e3w-Ev-BWW"/>
+                        <outlet property="progressSlider" destination="cFG-3V-cXw" id="LYe-JL-X6Y"/>
+                        <outlet property="timeLabel" destination="cL8-lv-p2d" id="NoM-hf-4LG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="75"/>
+            <point key="canvasLocation" x="-112" y="46"/>
         </scene>
     </scenes>
     <resources>
+        <image name="button_pause" width="185" height="185"/>
+        <image name="button_play" width="187" height="189"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
