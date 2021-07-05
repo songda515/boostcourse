@@ -15,3 +15,7 @@ MVC 패턴 기반의 음악 재생 플레이어 앱을 개발했습니다.
 - [View 체계 - Window&View, Frame vs Bounds, 디버깅 툴](https://jellysong.tistory.com/100)
 - [디자인 패턴 & Singleton 패턴 적용된 사례](https://jellysong.tistory.com/102)
 - [MVC 패턴(Model-View-ViewController](https://jellysong.tistory.com/103)
+
+## 1장 학습 내용 응용하기
+- 1장에서 학습한 음악 재생 플레이어 앱을 기반으로, FLO 앱을 개발했습니다.
+- [👉 FLO 앱 톺아보기](https://github.com/songda515/FLO)
